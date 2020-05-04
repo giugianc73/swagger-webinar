@@ -1,0 +1,32 @@
+openapi: 3.0.0
+info:
+  title: Swagger webinar API
+  description: Swagger webinar example API
+  version: 0.0.1
+servers:
+  - url: ${apiURL}
+
+tags:
+  - name: Swagger-Webinar
+    description: Api specifiche progetto Swagger-Webinar
+
+paths:
+
+# Resource manager endpoints
+
+  /simpleList:
+    get:
+      tags: 
+      - Swagger-Webinar
+      summary: Method AuthenticateService.
+      description: Simple json list         
+      operationId: simpleList
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: KO          
