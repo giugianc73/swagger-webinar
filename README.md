@@ -3,11 +3,9 @@
 * Esercizio per la comprensione dello strumento SWAGGER
 
 ## Techs
-
-## Examples
-
-* Su nexus: https://mauer.smeup.com/nexus/swagger-ui/
-* Su gateway di test (PRVL07): http://172.16.2.119:8096/gtw-hub/swagger/index.html
+* Swagger documentation: https://swagger.io/docs/specification/about/
+* Swagger editor: https://editor.swagger.io/
+* Swagger UI: https://github.com/swagger-api/swagger-ui 
 
 ## Prerequisites
 
