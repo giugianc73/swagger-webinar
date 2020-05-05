@@ -7,20 +7,22 @@ servers:
   - url: ${apiURL}
 
 tags:
-  - name: Swagger-Webinar
-    description: Api specifiche progetto Swagger-Webinar
+  - name: Swagger-Webinar in GET MODE
+    description: Api specifiche progetto Swagger-Webinar in GET mode
+  - name: Swagger-Webinar in POST MODE
+    description: Api specifiche progetto Swagger-Webinar in POST mode
 
 paths:
 
 # Resource manager endpoints
 
-  /simpleList:
+  /simpleListGet:
     get:
       tags: 
-      - Swagger-Webinar
-      summary: Method AuthenticateService.
-      description: Simple json list         
-      operationId: simpleList
+      - Swagger-Webinar in GET MODE
+      summary: Return a simple list
+      description: Simple json list
+      operationId: simpleListGet
       responses:
         '200':
           description: OK
@@ -30,3 +32,116 @@ paths:
                 type: string
         '400':
           description: KO          
+
+  /simpleNameGet/{id}:
+    get:
+      tags: 
+      - Swagger-Webinar in GET MODE
+      summary: Return single element with id in path
+      description: Return single element          
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: Alphanumeric ID of the name to get 
+      operationId: simpleNameGet/{id}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: KO
+
+  /simpleNameQueryGet:
+    get:
+      tags: 
+      - Swagger-Webinar in GET MODE
+      summary: Return single element with id in query
+      description: Return single element          
+      parameters:
+        - in: query
+          name: id
+          schema:
+            type: string
+          required: true
+          description: Alphanumeric ID of the name to get 
+      operationId: simpleNameQueryGet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: KO
+
+  /simpleListPost:
+    post:
+      tags: 
+      - Swagger-Webinar in POST MODE
+      summary: Return a simple list
+      description: Simple json list
+      operationId: simpleListPost
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: KO          
+
+  /simpleNamePost/{id}:
+    post:
+      tags: 
+      - Swagger-Webinar in POST MODE
+      summary: Return single element with id in path
+      description: Return single element          
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: Alphanumeric ID of the name to get
+      operationId: simpleNamePost/{id}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: KO
+
+  /simpleNameQueryPost:
+    post:
+      tags: 
+      - Swagger-Webinar in POST MODE
+      summary: Return single element with id in query
+      description: Return single element          
+      parameters:
+        - in: query
+          name: id
+          schema:
+            type: string
+          required: true
+          description: Alphanumeric ID of the name to get 
+      operationId: simpleNameQueryPost
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: string
+        '400':
+          description: KO
