@@ -6,6 +6,7 @@
 * Swagger documentation: https://swagger.io/docs/specification/about/
 * Swagger editor: https://editor.swagger.io/
 * Swagger UI: https://github.com/swagger-api/swagger-ui 
+* Restful defibition: https://www.iessolutions.eu/cosa-sono-le-rest-api-e-perche-usarle/
 
 ## Prerequisites
 
